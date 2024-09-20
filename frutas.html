@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <script>
+        function listaDeCompras() {
+            let frutas = ["Maçã", "Banana", "Laranja", "Uva", "Pera", "Kiwi"];
+            
+            alert(`Lista de frutas disponíveis: ${frutas.join(", ")}`);
+
+            while (frutas.length > 0) {
+                let fruta = prompt("Digite o nome de uma fruta para remover da lista:");
+
+                const index = frutas.indexOf(fruta);
+                if (index !== -1) {
+                    frutas.splice(index, 1);
+                    alert("Fruta foi retirada da lista.");
+                } else {
+                    alert("Fruta indisponível no nosso mercado.");
+                }
+
+                if (frutas.length > 0) {
+                    alert(`Lista de frutas restantes: ${frutas.join(", ")}`);
+                }
+            }
+a
+            alert("Lista de compras finalizada.");
+        }
+
+        window.onload = listaDeCompras;
+    </script>
+</head>
+<body>
+    <h1>Lista de Compras de Frutas</h1>
+    <p>Uma janela de prompt aparecerá para você interagir com a lista!</p>
+</body>
+</html>
